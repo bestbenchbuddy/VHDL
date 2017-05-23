@@ -1,0 +1,626 @@
+--------------------------------------------------------------------------------
+Release 14.6 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml Processor.twx Processor.ncd -o Processor.twr Processor.pcf
+-ucf inOutUcf.ucf
+
+Design file:              Processor.ncd
+Physical constraint file: Processor.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-06-08)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 32355 paths analyzed, 1893 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   6.852ns.
+--------------------------------------------------------------------------------
+
+Paths for end point ex_memRegister/shiftOutputOut_5 (SLICE_X17Y16.C2), 680 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     13.148ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               id_exRegister/RD2Out_2 (FF)
+  Destination:          ex_memRegister/shiftOutputOut_5 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.801ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.016ns (0.338 - 0.354)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: id_exRegister/RD2Out_2 to ex_memRegister/shiftOutputOut_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y10.CQ      Tcko                  0.447   id_exRegister/RD2Out<2>
+                                                       id_exRegister/RD2Out_2
+    SLICE_X14Y10.B3      net (fanout=3)        0.939   id_exRegister/RD2Out<2>
+    SLICE_X14Y10.B       Tilo                  0.203   id_exRegister/RD2Out<2>
+                                                       aluInputMux/Mmux_c91
+    SLICE_X14Y10.A3      net (fanout=1)        0.413   aluMuxOut<2>
+    SLICE_X14Y10.A       Tilo                  0.203   id_exRegister/RD2Out<2>
+                                                       ALU/Mmux_zTemp6_A101
+    SLICE_X12Y14.CX      net (fanout=1)        0.730   ALU/Mmux_zTemp6_rs_A<2>
+    SLICE_X12Y14.COUT    Tcxcy                 0.107   ALU/Mmux_zTemp6_rs_cy<3>
+                                                       ALU/Mmux_zTemp6_rs_cy<3>
+    SLICE_X12Y15.CIN     net (fanout=1)        0.003   ALU/Mmux_zTemp6_rs_cy<3>
+    SLICE_X12Y15.COUT    Tbyp                  0.076   ALU/Mmux_zTemp6_rs_cy<7>
+                                                       ALU/Mmux_zTemp6_rs_cy<7>
+    SLICE_X12Y16.CIN     net (fanout=1)        0.003   ALU/Mmux_zTemp6_rs_cy<7>
+    SLICE_X12Y16.BMUX    Tcinb                 0.260   ALU/Mmux_zTemp6_rs_cy<11>
+                                                       ALU/Mmux_zTemp6_rs_cy<11>
+    SLICE_X16Y15.C3      net (fanout=16)       0.813   aluOut<9>
+    SLICE_X16Y15.C       Tilo                  0.205   registers/memory_1<11>
+                                                       ShifterNew/Mmux_dataOut123
+    SLICE_X16Y15.A1      net (fanout=2)        0.456   ShifterNew/Mmux_dataOut124
+    SLICE_X16Y15.A       Tilo                  0.205   registers/memory_1<11>
+                                                       ShifterNew/Mmux_dataOut125_SW0
+    SLICE_X17Y16.C2      net (fanout=1)        1.416   N29
+    SLICE_X17Y16.CLK     Tas                   0.322   ex_memRegister/shiftOutputOut<5>
+                                                       ShifterNew/Mmux_dataOut126
+                                                       ex_memRegister/shiftOutputOut_5
+    -------------------------------------------------  ---------------------------
+    Total                                      6.801ns (2.028ns logic, 4.773ns route)
+                                                       (29.8% logic, 70.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     13.226ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               id_exRegister/aluSrcOut_1 (FF)
+  Destination:          ex_memRegister/shiftOutputOut_5 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.730ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.009ns (0.156 - 0.165)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: id_exRegister/aluSrcOut_1 to ex_memRegister/shiftOutputOut_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y17.AQ      Tcko                  0.408   id_exRegister/RD2Out<9>
+                                                       id_exRegister/aluSrcOut_1
+    SLICE_X12Y10.B3      net (fanout=7)        1.170   id_exRegister/aluSrcOut_1
+    SLICE_X12Y10.B       Tilo                  0.205   id_exRegister/RD2Out<3>
+                                                       aluInputMux/Mmux_c101
+    SLICE_X12Y10.A5      net (fanout=1)        0.169   aluMuxOut<3>
+    SLICE_X12Y10.A       Tilo                  0.205   id_exRegister/RD2Out<3>
+                                                       ALU/Mmux_zTemp6_A111
+    SLICE_X12Y14.DX      net (fanout=1)        0.717   ALU/Mmux_zTemp6_rs_A<3>
+    SLICE_X12Y14.COUT    Tdxcy                 0.097   ALU/Mmux_zTemp6_rs_cy<3>
+                                                       ALU/Mmux_zTemp6_rs_cy<3>
+    SLICE_X12Y15.CIN     net (fanout=1)        0.003   ALU/Mmux_zTemp6_rs_cy<3>
+    SLICE_X12Y15.COUT    Tbyp                  0.076   ALU/Mmux_zTemp6_rs_cy<7>
+                                                       ALU/Mmux_zTemp6_rs_cy<7>
+    SLICE_X12Y16.CIN     net (fanout=1)        0.003   ALU/Mmux_zTemp6_rs_cy<7>
+    SLICE_X12Y16.BMUX    Tcinb                 0.260   ALU/Mmux_zTemp6_rs_cy<11>
+                                                       ALU/Mmux_zTemp6_rs_cy<11>
+    SLICE_X16Y15.C3      net (fanout=16)       0.813   aluOut<9>
+    SLICE_X16Y15.C       Tilo                  0.205   registers/memory_1<11>
+                                                       ShifterNew/Mmux_dataOut123
+    SLICE_X16Y15.A1      net (fanout=2)        0.456   ShifterNew/Mmux_dataOut124
+    SLICE_X16Y15.A       Tilo                  0.205   registers/memory_1<11>
+                                                       ShifterNew/Mmux_dataOut125_SW0
+    SLICE_X17Y16.C2      net (fanout=1)        1.416   N29
+    SLICE_X17Y16.CLK     Tas                   0.322   ex_memRegister/shiftOutputOut<5>
+                                                       ShifterNew/Mmux_dataOut126
+                                                       ex_memRegister/shiftOutputOut_5
+    -------------------------------------------------  ---------------------------
+    Total                                      6.730ns (1.983ns logic, 4.747ns route)
+                                                       (29.5% logic, 70.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     13.235ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               id_exRegister/RD1Out_7 (FF)
+  Destination:          ex_memRegister/shiftOutputOut_5 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.702ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.028ns (0.338 - 0.366)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: id_exRegister/RD1Out_7 to ex_memRegister/shiftOutputOut_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y11.CQ      Tcko                  0.447   id_exRegister/RD1Out<7>
+                                                       id_exRegister/RD1Out_7
+    SLICE_X10Y11.A2      net (fanout=2)        1.660   id_exRegister/RD1Out<7>
+    SLICE_X10Y11.A       Tilo                  0.203   id_exRegister/RD1Out<7>
+                                                       ALU/Mmux_zTemp6_A151
+    SLICE_X12Y15.DX      net (fanout=1)        0.615   ALU/Mmux_zTemp6_rs_A<7>
+    SLICE_X12Y15.COUT    Tdxcy                 0.097   ALU/Mmux_zTemp6_rs_cy<7>
+                                                       ALU/Mmux_zTemp6_rs_cy<7>
+    SLICE_X12Y16.CIN     net (fanout=1)        0.003   ALU/Mmux_zTemp6_rs_cy<7>
+    SLICE_X12Y16.BMUX    Tcinb                 0.260   ALU/Mmux_zTemp6_rs_cy<11>
+                                                       ALU/Mmux_zTemp6_rs_cy<11>
+    SLICE_X16Y15.C3      net (fanout=16)       0.813   aluOut<9>
+    SLICE_X16Y15.C       Tilo                  0.205   registers/memory_1<11>
+                                                       ShifterNew/Mmux_dataOut123
+    SLICE_X16Y15.A1      net (fanout=2)        0.456   ShifterNew/Mmux_dataOut124
+    SLICE_X16Y15.A       Tilo                  0.205   registers/memory_1<11>
+                                                       ShifterNew/Mmux_dataOut125_SW0
+    SLICE_X17Y16.C2      net (fanout=1)        1.416   N29
+    SLICE_X17Y16.CLK     Tas                   0.322   ex_memRegister/shiftOutputOut<5>
+                                                       ShifterNew/Mmux_dataOut126
+                                                       ex_memRegister/shiftOutputOut_5
+    -------------------------------------------------  ---------------------------
+    Total                                      6.702ns (1.739ns logic, 4.963ns route)
+                                                       (25.9% logic, 74.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ex_memRegister/shiftOutputOut_9 (SLICE_X13Y19.C3), 1306 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     13.304ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               id_exRegister/RD2Out_2 (FF)
+  Destination:          ex_memRegister/shiftOutputOut_9 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.651ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.010ns (0.344 - 0.354)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: id_exRegister/RD2Out_2 to ex_memRegister/shiftOutputOut_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y10.CQ      Tcko                  0.447   id_exRegister/RD2Out<2>
+                                                       id_exRegister/RD2Out_2
+    SLICE_X14Y10.B3      net (fanout=3)        0.939   id_exRegister/RD2Out<2>
+    SLICE_X14Y10.B       Tilo                  0.203   id_exRegister/RD2Out<2>
+                                                       aluInputMux/Mmux_c91
+    SLICE_X14Y10.A3      net (fanout=1)        0.413   aluMuxOut<2>
+    SLICE_X14Y10.A       Tilo                  0.203   id_exRegister/RD2Out<2>
+                                                       ALU/Mmux_zTemp6_A101
+    SLICE_X12Y14.CX      net (fanout=1)        0.730   ALU/Mmux_zTemp6_rs_A<2>
+    SLICE_X12Y14.COUT    Tcxcy                 0.107   ALU/Mmux_zTemp6_rs_cy<3>
+                                                       ALU/Mmux_zTemp6_rs_cy<3>
+    SLICE_X12Y15.CIN     net (fanout=1)        0.003   ALU/Mmux_zTemp6_rs_cy<3>
+    SLICE_X12Y15.CMUX    Tcinc                 0.272   ALU/Mmux_zTemp6_rs_cy<7>
+                                                       ALU/Mmux_zTemp6_rs_cy<7>
+    SLICE_X8Y22.B2       net (fanout=16)       1.294   aluOut<6>
+    SLICE_X8Y22.B        Tilo                  0.205   N20
+                                                       ShifterNew/Mmux_dataOut165_SW1
+    SLICE_X8Y22.D1       net (fanout=2)        0.449   N20
+    SLICE_X8Y22.CMUX     Topdc                 0.338   N20
+                                                       ShifterNew/Mmux_dataOut168_SW3_F
+                                                       ShifterNew/Mmux_dataOut168_SW3
+    SLICE_X13Y19.C3      net (fanout=1)        0.726   N126
+    SLICE_X13Y19.CLK     Tas                   0.322   ex_memRegister/shiftOutputOut<9>
+                                                       ShifterNew/Mmux_dataOut168
+                                                       ex_memRegister/shiftOutputOut_9
+    -------------------------------------------------  ---------------------------
+    Total                                      6.651ns (2.097ns logic, 4.554ns route)
+                                                       (31.5% logic, 68.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     13.377ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               id_exRegister/aluSrcOut_1 (FF)
+  Destination:          ex_memRegister/shiftOutputOut_9 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.580ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.008ns (0.254 - 0.262)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: id_exRegister/aluSrcOut_1 to ex_memRegister/shiftOutputOut_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y17.AQ      Tcko                  0.408   id_exRegister/RD2Out<9>
+                                                       id_exRegister/aluSrcOut_1
+    SLICE_X12Y10.B3      net (fanout=7)        1.170   id_exRegister/aluSrcOut_1
+    SLICE_X12Y10.B       Tilo                  0.205   id_exRegister/RD2Out<3>
+                                                       aluInputMux/Mmux_c101
+    SLICE_X12Y10.A5      net (fanout=1)        0.169   aluMuxOut<3>
+    SLICE_X12Y10.A       Tilo                  0.205   id_exRegister/RD2Out<3>
+                                                       ALU/Mmux_zTemp6_A111
+    SLICE_X12Y14.DX      net (fanout=1)        0.717   ALU/Mmux_zTemp6_rs_A<3>
+    SLICE_X12Y14.COUT    Tdxcy                 0.097   ALU/Mmux_zTemp6_rs_cy<3>
+                                                       ALU/Mmux_zTemp6_rs_cy<3>
+    SLICE_X12Y15.CIN     net (fanout=1)        0.003   ALU/Mmux_zTemp6_rs_cy<3>
+    SLICE_X12Y15.CMUX    Tcinc                 0.272   ALU/Mmux_zTemp6_rs_cy<7>
+                                                       ALU/Mmux_zTemp6_rs_cy<7>
+    SLICE_X8Y22.B2       net (fanout=16)       1.294   aluOut<6>
+    SLICE_X8Y22.B        Tilo                  0.205   N20
+                                                       ShifterNew/Mmux_dataOut165_SW1
+    SLICE_X8Y22.D1       net (fanout=2)        0.449   N20
+    SLICE_X8Y22.CMUX     Topdc                 0.338   N20
+                                                       ShifterNew/Mmux_dataOut168_SW3_F
+                                                       ShifterNew/Mmux_dataOut168_SW3
+    SLICE_X13Y19.C3      net (fanout=1)        0.726   N126
+    SLICE_X13Y19.CLK     Tas                   0.322   ex_memRegister/shiftOutputOut<9>
+                                                       ShifterNew/Mmux_dataOut168
+                                                       ex_memRegister/shiftOutputOut_9
+    -------------------------------------------------  ---------------------------
+    Total                                      6.580ns (2.052ns logic, 4.528ns route)
+                                                       (31.2% logic, 68.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     13.396ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               id_exRegister/RD2Out_2 (FF)
+  Destination:          ex_memRegister/shiftOutputOut_9 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.559ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.010ns (0.344 - 0.354)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: id_exRegister/RD2Out_2 to ex_memRegister/shiftOutputOut_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y10.CQ      Tcko                  0.447   id_exRegister/RD2Out<2>
+                                                       id_exRegister/RD2Out_2
+    SLICE_X14Y10.B3      net (fanout=3)        0.939   id_exRegister/RD2Out<2>
+    SLICE_X14Y10.B       Tilo                  0.203   id_exRegister/RD2Out<2>
+                                                       aluInputMux/Mmux_c91
+    SLICE_X14Y10.A3      net (fanout=1)        0.413   aluMuxOut<2>
+    SLICE_X14Y10.A       Tilo                  0.203   id_exRegister/RD2Out<2>
+                                                       ALU/Mmux_zTemp6_A101
+    SLICE_X12Y14.CX      net (fanout=1)        0.730   ALU/Mmux_zTemp6_rs_A<2>
+    SLICE_X12Y14.COUT    Tcxcy                 0.107   ALU/Mmux_zTemp6_rs_cy<3>
+                                                       ALU/Mmux_zTemp6_rs_cy<3>
+    SLICE_X12Y15.CIN     net (fanout=1)        0.003   ALU/Mmux_zTemp6_rs_cy<3>
+    SLICE_X12Y15.CMUX    Tcinc                 0.272   ALU/Mmux_zTemp6_rs_cy<7>
+                                                       ALU/Mmux_zTemp6_rs_cy<7>
+    SLICE_X8Y22.B2       net (fanout=16)       1.294   aluOut<6>
+    SLICE_X8Y22.B        Tilo                  0.205   N20
+                                                       ShifterNew/Mmux_dataOut165_SW1
+    SLICE_X8Y22.C4       net (fanout=2)        0.352   N20
+    SLICE_X8Y22.CMUX     Tilo                  0.343   N20
+                                                       ShifterNew/Mmux_dataOut168_SW3_G
+                                                       ShifterNew/Mmux_dataOut168_SW3
+    SLICE_X13Y19.C3      net (fanout=1)        0.726   N126
+    SLICE_X13Y19.CLK     Tas                   0.322   ex_memRegister/shiftOutputOut<9>
+                                                       ShifterNew/Mmux_dataOut168
+                                                       ex_memRegister/shiftOutputOut_9
+    -------------------------------------------------  ---------------------------
+    Total                                      6.559ns (2.102ns logic, 4.457ns route)
+                                                       (32.0% logic, 68.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ex_memRegister/shiftOutputOut_9 (SLICE_X13Y19.C2), 623 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     13.493ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               id_exRegister/ALUCtrlOut_2_2 (FF)
+  Destination:          ex_memRegister/shiftOutputOut_9 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.445ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.027ns (0.344 - 0.371)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: id_exRegister/ALUCtrlOut_2_2 to ex_memRegister/shiftOutputOut_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y14.BQ      Tcko                  0.391   id_exRegister/ALUCtrlOut_2_2
+                                                       id_exRegister/ALUCtrlOut_2_2
+    SLICE_X16Y18.A1      net (fanout=6)        1.673   id_exRegister/ALUCtrlOut_2_2
+    SLICE_X16Y18.A       Tilo                  0.205   id_exRegister/RD2Out<12>
+                                                       ALU/Mmux_zTemp6_B511
+    SLICE_X12Y17.D1      net (fanout=3)        0.886   ALU/Mmux_zTemp6_B51
+    SLICE_X12Y17.DMUX    Topdd                 0.374   aluOut<15>
+                                                       ALU/Mmux_zTemp6_rs_lut<15>
+                                                       ALU/Mmux_zTemp6_rs_xor<15>
+    SLICE_X12Y24.C4      net (fanout=10)       1.006   aluOut<15>
+    SLICE_X12Y24.CMUX    Tilo                  0.343   N123
+                                                       ShifterNew/Mmux_dataOut168_SW1_G
+                                                       ShifterNew/Mmux_dataOut168_SW1
+    SLICE_X13Y19.C2      net (fanout=1)        1.245   N123
+    SLICE_X13Y19.CLK     Tas                   0.322   ex_memRegister/shiftOutputOut<9>
+                                                       ShifterNew/Mmux_dataOut168
+                                                       ex_memRegister/shiftOutputOut_9
+    -------------------------------------------------  ---------------------------
+    Total                                      6.445ns (1.635ns logic, 4.810ns route)
+                                                       (25.4% logic, 74.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     13.495ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               id_exRegister/ALUCtrlOut_2_2 (FF)
+  Destination:          ex_memRegister/shiftOutputOut_9 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.443ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.027ns (0.344 - 0.371)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: id_exRegister/ALUCtrlOut_2_2 to ex_memRegister/shiftOutputOut_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y14.BQ      Tcko                  0.391   id_exRegister/ALUCtrlOut_2_2
+                                                       id_exRegister/ALUCtrlOut_2_2
+    SLICE_X16Y18.A1      net (fanout=6)        1.673   id_exRegister/ALUCtrlOut_2_2
+    SLICE_X16Y18.A       Tilo                  0.205   id_exRegister/RD2Out<12>
+                                                       ALU/Mmux_zTemp6_B511
+    SLICE_X12Y17.B4      net (fanout=3)        0.721   ALU/Mmux_zTemp6_B51
+    SLICE_X12Y17.DMUX    Topbd                 0.537   aluOut<15>
+                                                       ALU/Mmux_zTemp6_rs_lut<13>
+                                                       ALU/Mmux_zTemp6_rs_xor<15>
+    SLICE_X12Y24.C4      net (fanout=10)       1.006   aluOut<15>
+    SLICE_X12Y24.CMUX    Tilo                  0.343   N123
+                                                       ShifterNew/Mmux_dataOut168_SW1_G
+                                                       ShifterNew/Mmux_dataOut168_SW1
+    SLICE_X13Y19.C2      net (fanout=1)        1.245   N123
+    SLICE_X13Y19.CLK     Tas                   0.322   ex_memRegister/shiftOutputOut<9>
+                                                       ShifterNew/Mmux_dataOut168
+                                                       ex_memRegister/shiftOutputOut_9
+    -------------------------------------------------  ---------------------------
+    Total                                      6.443ns (1.798ns logic, 4.645ns route)
+                                                       (27.9% logic, 72.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     13.498ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               id_exRegister/RD2Out_2 (FF)
+  Destination:          ex_memRegister/shiftOutputOut_9 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.457ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.010ns (0.344 - 0.354)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: id_exRegister/RD2Out_2 to ex_memRegister/shiftOutputOut_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y10.CQ      Tcko                  0.447   id_exRegister/RD2Out<2>
+                                                       id_exRegister/RD2Out_2
+    SLICE_X14Y10.B3      net (fanout=3)        0.939   id_exRegister/RD2Out<2>
+    SLICE_X14Y10.B       Tilo                  0.203   id_exRegister/RD2Out<2>
+                                                       aluInputMux/Mmux_c91
+    SLICE_X14Y10.A3      net (fanout=1)        0.413   aluMuxOut<2>
+    SLICE_X14Y10.A       Tilo                  0.203   id_exRegister/RD2Out<2>
+                                                       ALU/Mmux_zTemp6_A101
+    SLICE_X12Y14.CX      net (fanout=1)        0.730   ALU/Mmux_zTemp6_rs_A<2>
+    SLICE_X12Y14.DMUX    Tcxd                  0.259   ALU/Mmux_zTemp6_rs_cy<3>
+                                                       ALU/Mmux_zTemp6_rs_cy<3>
+    SLICE_X12Y24.C5      net (fanout=13)       1.353   aluOut<3>
+    SLICE_X12Y24.CMUX    Tilo                  0.343   N123
+                                                       ShifterNew/Mmux_dataOut168_SW1_G
+                                                       ShifterNew/Mmux_dataOut168_SW1
+    SLICE_X13Y19.C2      net (fanout=1)        1.245   N123
+    SLICE_X13Y19.CLK     Tas                   0.322   ex_memRegister/shiftOutputOut<9>
+                                                       ShifterNew/Mmux_dataOut168
+                                                       ex_memRegister/shiftOutputOut_9
+    -------------------------------------------------  ---------------------------
+    Total                                      6.457ns (1.777ns logic, 4.680ns route)
+                                                       (27.5% logic, 72.5% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point dataMemory/Mram_memory12/D (SLICE_X14Y16.DX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.379ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               ex_memRegister/RD2Out_11 (FF)
+  Destination:          dataMemory/Mram_memory12/D (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.374ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.005ns (0.087 - 0.092)
+  Source Clock:         clk_IBUF_BUFG rising at 20.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: ex_memRegister/RD2Out_11 to dataMemory/Mram_memory12/D
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y16.DQ      Tcko                  0.198   ex_memRegister/RD2Out<11>
+                                                       ex_memRegister/RD2Out_11
+    SLICE_X14Y16.DX      net (fanout=1)        0.257   ex_memRegister/RD2Out<11>
+    SLICE_X14Y16.CLK     Tdh         (-Th)     0.081   mem_wbRegister/dataMemOutOut<11>
+                                                       dataMemory/Mram_memory12/D
+    -------------------------------------------------  ---------------------------
+    Total                                      0.374ns (0.117ns logic, 0.257ns route)
+                                                       (31.3% logic, 68.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dataMemory/Mram_memory12/C (SLICE_X14Y16.DX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.385ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               ex_memRegister/RD2Out_11 (FF)
+  Destination:          dataMemory/Mram_memory12/C (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.380ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.005ns (0.087 - 0.092)
+  Source Clock:         clk_IBUF_BUFG rising at 20.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: ex_memRegister/RD2Out_11 to dataMemory/Mram_memory12/C
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y16.DQ      Tcko                  0.198   ex_memRegister/RD2Out<11>
+                                                       ex_memRegister/RD2Out_11
+    SLICE_X14Y16.DX      net (fanout=1)        0.257   ex_memRegister/RD2Out<11>
+    SLICE_X14Y16.CLK     Tdh         (-Th)     0.075   mem_wbRegister/dataMemOutOut<11>
+                                                       dataMemory/Mram_memory12/C
+    -------------------------------------------------  ---------------------------
+    Total                                      0.380ns (0.123ns logic, 0.257ns route)
+                                                       (32.4% logic, 67.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dataMemory/Mram_memory12/B (SLICE_X14Y16.DX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.388ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               ex_memRegister/RD2Out_11 (FF)
+  Destination:          dataMemory/Mram_memory12/B (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.383ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.005ns (0.087 - 0.092)
+  Source Clock:         clk_IBUF_BUFG rising at 20.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: ex_memRegister/RD2Out_11 to dataMemory/Mram_memory12/B
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y16.DQ      Tcko                  0.198   ex_memRegister/RD2Out<11>
+                                                       ex_memRegister/RD2Out_11
+    SLICE_X14Y16.DX      net (fanout=1)        0.257   ex_memRegister/RD2Out<11>
+    SLICE_X14Y16.CLK     Tdh         (-Th)     0.072   mem_wbRegister/dataMemOutOut<11>
+                                                       dataMemory/Mram_memory12/B
+    -------------------------------------------------  ---------------------------
+    Total                                      0.383ns (0.126ns logic, 0.257ns route)
+                                                       (32.9% logic, 67.1% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 18.270ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 1.730ns (578.035MHz) (Tbcper_I)
+  Physical resource: clk_IBUF_BUFG/I0
+  Logical resource: clk_IBUF_BUFG/I0
+  Location pin: BUFGMUX_X3Y16.I0
+  Clock network: clk_IBUF
+--------------------------------------------------------------------------------
+Slack: 18.962ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 1.038ns (963.391MHz) (Tcp)
+  Physical resource: instructReg/q<8>/CLK
+  Logical resource: InstructMem/Mram_memory9/A/CLK
+  Location pin: SLICE_X6Y13.CLK
+  Clock network: clk_IBUF_BUFG
+--------------------------------------------------------------------------------
+Slack: 18.962ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 1.038ns (963.391MHz) (Tcp)
+  Physical resource: instructReg/q<8>/CLK
+  Logical resource: InstructMem/Mram_memory9/B/CLK
+  Location pin: SLICE_X6Y13.CLK
+  Clock network: clk_IBUF_BUFG
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.852|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 32355 paths, 0 nets, and 2166 connections
+
+Design statistics:
+   Minimum period:   6.852ns{1}   (Maximum frequency: 145.943MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Tue Feb 28 17:21:59 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 226 MB
+
+
+

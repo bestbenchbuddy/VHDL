@@ -1,0 +1,18 @@
+NET mclk LOC = V10; //master clock
+
+Net leds(0) LOC=T17;//a segment
+Net leds(1) LOC=T18;//b segment
+Net leds(2) LOC=U17;//c segment
+Net leds(3) LOC=U18;//d segment
+Net leds(4) LOC=M14;//e segment
+Net leds(5) LOC=N14;//f segment
+Net leds(6) LOC=L14;//g segment
+Net leds(7) LOC=M13;//decimal point
+
+Net segment(0) LOC=N16;// first digit segment
+Net segment(1) LOC=N15;// second digit segment
+Net segment(2) LOC=P18;// third digit segment
+Net segment(3) LOC=P17;// fourth digit segment
+
+NET "clk" TNM_NET = clk;
+TIMESPEC  TS_clk = PERIOD "clk" 20 ns HIGH 50%;

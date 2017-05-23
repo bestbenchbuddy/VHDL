@@ -1,0 +1,249 @@
+//! **************************************************************************
+// Written by: Map P.68d on Tue Feb 28 17:21:40 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "segment<0>" LOCATE = SITE "N16" LEVEL 1;
+COMP "segment<1>" LOCATE = SITE "N15" LEVEL 1;
+COMP "segment<2>" LOCATE = SITE "P18" LEVEL 1;
+COMP "segment<3>" LOCATE = SITE "P17" LEVEL 1;
+COMP "mclk" LOCATE = SITE "V10" LEVEL 1;
+COMP "leds<0>" LOCATE = SITE "T17" LEVEL 1;
+COMP "leds<1>" LOCATE = SITE "T18" LEVEL 1;
+COMP "leds<2>" LOCATE = SITE "U17" LEVEL 1;
+COMP "leds<3>" LOCATE = SITE "U18" LEVEL 1;
+COMP "leds<4>" LOCATE = SITE "M14" LEVEL 1;
+COMP "leds<5>" LOCATE = SITE "N14" LEVEL 1;
+COMP "leds<6>" LOCATE = SITE "L14" LEVEL 1;
+COMP "leds<7>" LOCATE = SITE "M13" LEVEL 1;
+TIMEGRP clk = BEL "PCRegister/q_0" BEL "PCRegister/q_1" BEL "PCRegister/q_2"
+        BEL "PCRegister/q_3" BEL "PCRegister/q_4" BEL "PCRegister/q_5" BEL
+        "PCRegister/q_6" BEL "PCRegister/q_7" BEL "registers/memory_6_15" BEL
+        "registers/memory_6_14" BEL "registers/memory_6_13" BEL
+        "registers/memory_6_12" BEL "registers/memory_6_11" BEL
+        "registers/memory_6_10" BEL "registers/memory_6_9" BEL
+        "registers/memory_6_8" BEL "registers/memory_6_7" BEL
+        "registers/memory_6_6" BEL "registers/memory_6_5" BEL
+        "registers/memory_6_4" BEL "registers/memory_6_3" BEL
+        "registers/memory_6_2" BEL "registers/memory_6_1" BEL
+        "registers/memory_6_0" BEL "registers/memory_5_15" BEL
+        "registers/memory_5_14" BEL "registers/memory_5_13" BEL
+        "registers/memory_5_12" BEL "registers/memory_5_11" BEL
+        "registers/memory_5_10" BEL "registers/memory_5_9" BEL
+        "registers/memory_5_8" BEL "registers/memory_5_7" BEL
+        "registers/memory_5_6" BEL "registers/memory_5_5" BEL
+        "registers/memory_5_4" BEL "registers/memory_5_3" BEL
+        "registers/memory_5_2" BEL "registers/memory_5_1" BEL
+        "registers/memory_5_0" BEL "registers/memory_7_15" BEL
+        "registers/memory_7_14" BEL "registers/memory_7_13" BEL
+        "registers/memory_7_12" BEL "registers/memory_7_11" BEL
+        "registers/memory_7_10" BEL "registers/memory_7_9" BEL
+        "registers/memory_7_8" BEL "registers/memory_7_7" BEL
+        "registers/memory_7_6" BEL "registers/memory_7_5" BEL
+        "registers/memory_7_4" BEL "registers/memory_7_3" BEL
+        "registers/memory_7_2" BEL "registers/memory_7_1" BEL
+        "registers/memory_7_0" BEL "registers/memory_4_15" BEL
+        "registers/memory_4_14" BEL "registers/memory_4_13" BEL
+        "registers/memory_4_12" BEL "registers/memory_4_11" BEL
+        "registers/memory_4_10" BEL "registers/memory_4_9" BEL
+        "registers/memory_4_8" BEL "registers/memory_4_7" BEL
+        "registers/memory_4_6" BEL "registers/memory_4_5" BEL
+        "registers/memory_4_4" BEL "registers/memory_4_3" BEL
+        "registers/memory_4_2" BEL "registers/memory_4_1" BEL
+        "registers/memory_4_0" BEL "registers/memory_3_15" BEL
+        "registers/memory_3_14" BEL "registers/memory_3_13" BEL
+        "registers/memory_3_12" BEL "registers/memory_3_11" BEL
+        "registers/memory_3_10" BEL "registers/memory_3_9" BEL
+        "registers/memory_3_8" BEL "registers/memory_3_7" BEL
+        "registers/memory_3_6" BEL "registers/memory_3_5" BEL
+        "registers/memory_3_4" BEL "registers/memory_3_3" BEL
+        "registers/memory_3_2" BEL "registers/memory_3_1" BEL
+        "registers/memory_3_0" BEL "registers/memory_1_15" BEL
+        "registers/memory_1_14" BEL "registers/memory_1_13" BEL
+        "registers/memory_1_12" BEL "registers/memory_1_11" BEL
+        "registers/memory_1_10" BEL "registers/memory_1_9" BEL
+        "registers/memory_1_8" BEL "registers/memory_1_7" BEL
+        "registers/memory_1_6" BEL "registers/memory_1_5" BEL
+        "registers/memory_1_4" BEL "registers/memory_1_3" BEL
+        "registers/memory_1_2" BEL "registers/memory_1_1" BEL
+        "registers/memory_1_0" BEL "registers/memory_0_15" BEL
+        "registers/memory_0_14" BEL "registers/memory_0_13" BEL
+        "registers/memory_0_12" BEL "registers/memory_0_11" BEL
+        "registers/memory_0_10" BEL "registers/memory_0_9" BEL
+        "registers/memory_0_8" BEL "registers/memory_0_7" BEL
+        "registers/memory_0_6" BEL "registers/memory_0_5" BEL
+        "registers/memory_0_4" BEL "registers/memory_0_3" BEL
+        "registers/memory_0_2" BEL "registers/memory_0_1" BEL
+        "registers/memory_0_0" BEL "registers/memory_2_15" BEL
+        "registers/memory_2_14" BEL "registers/memory_2_13" BEL
+        "registers/memory_2_12" BEL "registers/memory_2_11" BEL
+        "registers/memory_2_10" BEL "registers/memory_2_9" BEL
+        "registers/memory_2_8" BEL "registers/memory_2_7" BEL
+        "registers/memory_2_6" BEL "registers/memory_2_5" BEL
+        "registers/memory_2_4" BEL "registers/memory_2_3" BEL
+        "registers/memory_2_2" BEL "registers/memory_2_1" BEL
+        "registers/memory_2_0" BEL "instructReg/q_15" BEL "instructReg/q_14"
+        BEL "instructReg/q_13" BEL "instructReg/q_12" BEL "instructReg/q_11"
+        BEL "instructReg/q_10" BEL "instructReg/q_9" BEL "instructReg/q_8" BEL
+        "instructReg/q_7" BEL "instructReg/q_6" BEL "instructReg/q_2" BEL
+        "instructReg/q_1" BEL "instructReg/q_0" BEL "id_exRegister/regDestOut"
+        BEL "id_exRegister/memToRegOut" BEL "id_exRegister/aluSrcOut" BEL
+        "id_exRegister/dataMemWriteOut" BEL "id_exRegister/shiftEnableOut" BEL
+        "id_exRegister/shiftDirectionOut" BEL "id_exRegister/ALUCtrlOut_2" BEL
+        "id_exRegister/ALUCtrlOut_1" BEL "id_exRegister/ALUCtrlOut_0" BEL
+        "id_exRegister/shiftAmountOut_2" BEL "id_exRegister/shiftAmountOut_1"
+        BEL "id_exRegister/shiftAmountOut_0" BEL "id_exRegister/rtOut_2" BEL
+        "id_exRegister/rtOut_1" BEL "id_exRegister/rtOut_0" BEL
+        "id_exRegister/RD2Out_15" BEL "id_exRegister/RD2Out_14" BEL
+        "id_exRegister/RD2Out_13" BEL "id_exRegister/RD2Out_12" BEL
+        "id_exRegister/RD2Out_11" BEL "id_exRegister/RD2Out_10" BEL
+        "id_exRegister/RD2Out_9" BEL "id_exRegister/RD2Out_8" BEL
+        "id_exRegister/RD2Out_7" BEL "id_exRegister/RD2Out_6" BEL
+        "id_exRegister/RD2Out_5" BEL "id_exRegister/RD2Out_4" BEL
+        "id_exRegister/RD2Out_3" BEL "id_exRegister/RD2Out_2" BEL
+        "id_exRegister/RD2Out_1" BEL "id_exRegister/RD2Out_0" BEL
+        "id_exRegister/RD1Out_15" BEL "id_exRegister/RD1Out_14" BEL
+        "id_exRegister/RD1Out_13" BEL "id_exRegister/RD1Out_12" BEL
+        "id_exRegister/RD1Out_11" BEL "id_exRegister/RD1Out_10" BEL
+        "id_exRegister/RD1Out_9" BEL "id_exRegister/RD1Out_8" BEL
+        "id_exRegister/RD1Out_7" BEL "id_exRegister/RD1Out_6" BEL
+        "id_exRegister/RD1Out_5" BEL "id_exRegister/RD1Out_4" BEL
+        "id_exRegister/RD1Out_3" BEL "id_exRegister/RD1Out_2" BEL
+        "id_exRegister/RD1Out_1" BEL "id_exRegister/RD1Out_0" BEL
+        "ex_memRegister/dataMemWriteOut" BEL
+        "ex_memRegister/regWriteAddrOut_2" BEL
+        "ex_memRegister/regWriteAddrOut_1" BEL
+        "ex_memRegister/regWriteAddrOut_0" BEL "ex_memRegister/RD2Out_15" BEL
+        "ex_memRegister/RD2Out_14" BEL "ex_memRegister/RD2Out_13" BEL
+        "ex_memRegister/RD2Out_12" BEL "ex_memRegister/RD2Out_11" BEL
+        "ex_memRegister/RD2Out_10" BEL "ex_memRegister/RD2Out_9" BEL
+        "ex_memRegister/RD2Out_8" BEL "ex_memRegister/RD2Out_7" BEL
+        "ex_memRegister/RD2Out_6" BEL "ex_memRegister/RD2Out_5" BEL
+        "ex_memRegister/RD2Out_4" BEL "ex_memRegister/RD2Out_3" BEL
+        "ex_memRegister/RD2Out_2" BEL "ex_memRegister/RD2Out_1" BEL
+        "ex_memRegister/RD2Out_0" BEL "ex_memRegister/shiftOutputOut_15" BEL
+        "ex_memRegister/shiftOutputOut_14" BEL
+        "ex_memRegister/shiftOutputOut_13" BEL
+        "ex_memRegister/shiftOutputOut_12" BEL
+        "ex_memRegister/shiftOutputOut_11" BEL
+        "ex_memRegister/shiftOutputOut_10" BEL
+        "ex_memRegister/shiftOutputOut_9" BEL
+        "ex_memRegister/shiftOutputOut_8" BEL
+        "ex_memRegister/shiftOutputOut_7" BEL
+        "ex_memRegister/shiftOutputOut_6" BEL
+        "ex_memRegister/shiftOutputOut_5" BEL
+        "ex_memRegister/shiftOutputOut_4" BEL
+        "ex_memRegister/shiftOutputOut_3" BEL
+        "ex_memRegister/shiftOutputOut_2" BEL
+        "ex_memRegister/shiftOutputOut_1" BEL
+        "ex_memRegister/shiftOutputOut_0" BEL
+        "mem_wbRegister/dataMemOutOut_15" BEL
+        "mem_wbRegister/dataMemOutOut_14" BEL
+        "mem_wbRegister/dataMemOutOut_13" BEL
+        "mem_wbRegister/dataMemOutOut_12" BEL
+        "mem_wbRegister/dataMemOutOut_11" BEL
+        "mem_wbRegister/dataMemOutOut_10" BEL "mem_wbRegister/dataMemOutOut_9"
+        BEL "mem_wbRegister/dataMemOutOut_8" BEL
+        "mem_wbRegister/dataMemOutOut_7" BEL "mem_wbRegister/dataMemOutOut_6"
+        BEL "mem_wbRegister/dataMemOutOut_5" BEL
+        "mem_wbRegister/dataMemOutOut_4" BEL "mem_wbRegister/dataMemOutOut_3"
+        BEL "mem_wbRegister/dataMemOutOut_2" BEL
+        "mem_wbRegister/dataMemOutOut_1" BEL "mem_wbRegister/dataMemOutOut_0"
+        BEL "mem_wbRegister/regWriteAddrOut_2" BEL
+        "mem_wbRegister/regWriteAddrOut_1" BEL
+        "mem_wbRegister/regWriteAddrOut_0" BEL
+        "mem_wbRegister/shiftOutputOut_15" BEL
+        "mem_wbRegister/shiftOutputOut_14" BEL
+        "mem_wbRegister/shiftOutputOut_13" BEL
+        "mem_wbRegister/shiftOutputOut_12" BEL
+        "mem_wbRegister/shiftOutputOut_11" BEL
+        "mem_wbRegister/shiftOutputOut_10" BEL
+        "mem_wbRegister/shiftOutputOut_9" BEL
+        "mem_wbRegister/shiftOutputOut_8" BEL
+        "mem_wbRegister/shiftOutputOut_7" BEL
+        "mem_wbRegister/shiftOutputOut_6" BEL
+        "mem_wbRegister/shiftOutputOut_5" BEL
+        "mem_wbRegister/shiftOutputOut_4" BEL
+        "mem_wbRegister/shiftOutputOut_3" BEL
+        "mem_wbRegister/shiftOutputOut_2" BEL
+        "mem_wbRegister/shiftOutputOut_1" BEL
+        "mem_wbRegister/shiftOutputOut_0" BEL "id_exRegister/ALUCtrlOut_2_1"
+        BEL "id_exRegister/ALUCtrlOut_0_1" BEL "id_exRegister/ALUCtrlOut_1_1"
+        BEL "id_exRegister/aluSrcOut_1" BEL "id_exRegister/shiftAmountOut_2_1"
+        BEL "id_exRegister/shiftAmountOut_1_1" BEL
+        "id_exRegister/shiftAmountOut_0_1" BEL
+        "id_exRegister/shiftAmountOut_2_2" BEL
+        "id_exRegister/shiftAmountOut_1_2" BEL "id_exRegister/ALUCtrlOut_0_2"
+        BEL "id_exRegister/ALUCtrlOut_1_2" BEL "id_exRegister/ALUCtrlOut_2_2"
+        BEL "id_exRegister/aluSrcOut_2" BEL "clk_IBUF_BUFG" BEL
+        "id_exRegister/Mshreg_rdOut_2" BEL "id_exRegister/rdOut_2" BEL
+        "id_exRegister/Mshreg_rdOut_1" BEL "id_exRegister/rdOut_1" BEL
+        "id_exRegister/Mshreg_rdOut_0" BEL "id_exRegister/rdOut_0" BEL
+        "mem_wbRegister/Mshreg_memToRegOut" BEL "mem_wbRegister/memToRegOut"
+        BEL "InstructMem/Mram_memory1/D" BEL "InstructMem/Mram_memory1/C" BEL
+        "InstructMem/Mram_memory1/B" BEL "InstructMem/Mram_memory1/A" BEL
+        "InstructMem/Mram_memory4/D" BEL "InstructMem/Mram_memory4/C" BEL
+        "InstructMem/Mram_memory4/B" BEL "InstructMem/Mram_memory4/A" BEL
+        "InstructMem/Mram_memory2/D" BEL "InstructMem/Mram_memory2/C" BEL
+        "InstructMem/Mram_memory2/B" BEL "InstructMem/Mram_memory2/A" BEL
+        "InstructMem/Mram_memory3/D" BEL "InstructMem/Mram_memory3/C" BEL
+        "InstructMem/Mram_memory3/B" BEL "InstructMem/Mram_memory3/A" BEL
+        "InstructMem/Mram_memory7/D" BEL "InstructMem/Mram_memory7/C" BEL
+        "InstructMem/Mram_memory7/B" BEL "InstructMem/Mram_memory7/A" BEL
+        "InstructMem/Mram_memory5/D" BEL "InstructMem/Mram_memory5/C" BEL
+        "InstructMem/Mram_memory5/B" BEL "InstructMem/Mram_memory5/A" BEL
+        "InstructMem/Mram_memory6/D" BEL "InstructMem/Mram_memory6/C" BEL
+        "InstructMem/Mram_memory6/B" BEL "InstructMem/Mram_memory6/A" BEL
+        "InstructMem/Mram_memory8/D" BEL "InstructMem/Mram_memory8/C" BEL
+        "InstructMem/Mram_memory8/B" BEL "InstructMem/Mram_memory8/A" BEL
+        "InstructMem/Mram_memory9/D" BEL "InstructMem/Mram_memory9/C" BEL
+        "InstructMem/Mram_memory9/B" BEL "InstructMem/Mram_memory9/A" BEL
+        "InstructMem/Mram_memory12/D" BEL "InstructMem/Mram_memory12/C" BEL
+        "InstructMem/Mram_memory12/B" BEL "InstructMem/Mram_memory12/A" BEL
+        "InstructMem/Mram_memory10/D" BEL "InstructMem/Mram_memory10/C" BEL
+        "InstructMem/Mram_memory10/B" BEL "InstructMem/Mram_memory10/A" BEL
+        "InstructMem/Mram_memory11/D" BEL "InstructMem/Mram_memory11/C" BEL
+        "InstructMem/Mram_memory11/B" BEL "InstructMem/Mram_memory11/A" BEL
+        "InstructMem/Mram_memory15/D" BEL "InstructMem/Mram_memory15/C" BEL
+        "InstructMem/Mram_memory15/B" BEL "InstructMem/Mram_memory15/A" BEL
+        "InstructMem/Mram_memory13/D" BEL "InstructMem/Mram_memory13/C" BEL
+        "InstructMem/Mram_memory13/B" BEL "InstructMem/Mram_memory13/A" BEL
+        "InstructMem/Mram_memory14/D" BEL "InstructMem/Mram_memory14/C" BEL
+        "InstructMem/Mram_memory14/B" BEL "InstructMem/Mram_memory14/A" BEL
+        "InstructMem/Mram_memory16/D" BEL "InstructMem/Mram_memory16/C" BEL
+        "InstructMem/Mram_memory16/B" BEL "InstructMem/Mram_memory16/A" BEL
+        "dataMemory/Mram_memory1/A" BEL "dataMemory/Mram_memory1/B" BEL
+        "dataMemory/Mram_memory1/C" BEL "dataMemory/Mram_memory1/D" BEL
+        "dataMemory/Mram_memory10/A" BEL "dataMemory/Mram_memory10/B" BEL
+        "dataMemory/Mram_memory10/C" BEL "dataMemory/Mram_memory10/D" BEL
+        "dataMemory/Mram_memory11/A" BEL "dataMemory/Mram_memory11/B" BEL
+        "dataMemory/Mram_memory11/C" BEL "dataMemory/Mram_memory11/D" BEL
+        "dataMemory/Mram_memory12/A" BEL "dataMemory/Mram_memory12/B" BEL
+        "dataMemory/Mram_memory12/C" BEL "dataMemory/Mram_memory12/D" BEL
+        "dataMemory/Mram_memory13/A" BEL "dataMemory/Mram_memory13/B" BEL
+        "dataMemory/Mram_memory13/C" BEL "dataMemory/Mram_memory13/D" BEL
+        "dataMemory/Mram_memory14/A" BEL "dataMemory/Mram_memory14/B" BEL
+        "dataMemory/Mram_memory14/C" BEL "dataMemory/Mram_memory14/D" BEL
+        "dataMemory/Mram_memory15/A" BEL "dataMemory/Mram_memory15/B" BEL
+        "dataMemory/Mram_memory15/C" BEL "dataMemory/Mram_memory15/D" BEL
+        "dataMemory/Mram_memory16/A" BEL "dataMemory/Mram_memory16/B" BEL
+        "dataMemory/Mram_memory16/C" BEL "dataMemory/Mram_memory16/D" BEL
+        "dataMemory/Mram_memory2/A" BEL "dataMemory/Mram_memory2/B" BEL
+        "dataMemory/Mram_memory2/C" BEL "dataMemory/Mram_memory2/D" BEL
+        "dataMemory/Mram_memory3/A" BEL "dataMemory/Mram_memory3/B" BEL
+        "dataMemory/Mram_memory3/C" BEL "dataMemory/Mram_memory3/D" BEL
+        "dataMemory/Mram_memory4/A" BEL "dataMemory/Mram_memory4/B" BEL
+        "dataMemory/Mram_memory4/C" BEL "dataMemory/Mram_memory4/D" BEL
+        "dataMemory/Mram_memory5/A" BEL "dataMemory/Mram_memory5/B" BEL
+        "dataMemory/Mram_memory5/C" BEL "dataMemory/Mram_memory5/D" BEL
+        "dataMemory/Mram_memory6/A" BEL "dataMemory/Mram_memory6/B" BEL
+        "dataMemory/Mram_memory6/C" BEL "dataMemory/Mram_memory6/D" BEL
+        "dataMemory/Mram_memory7/A" BEL "dataMemory/Mram_memory7/B" BEL
+        "dataMemory/Mram_memory7/C" BEL "dataMemory/Mram_memory7/D" BEL
+        "dataMemory/Mram_memory8/A" BEL "dataMemory/Mram_memory8/B" BEL
+        "dataMemory/Mram_memory8/C" BEL "dataMemory/Mram_memory8/D" BEL
+        "dataMemory/Mram_memory9/A" BEL "dataMemory/Mram_memory9/B" BEL
+        "dataMemory/Mram_memory9/C" BEL "dataMemory/Mram_memory9/D";
+TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+SCHEMATIC END;
+
